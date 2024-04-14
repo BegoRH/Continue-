@@ -2,14 +2,14 @@
 int main()
 {
    int again = 1;
-   while (again ==1)
+   do
    {
        //program
        do   //loop until valid input
        {
            printf("Do you want to start again?\n");
-           scanf("%d", again);
-       }while(again !=0 || again !=1);
+           scanf("%d", &again);
+       } while(again == 1);
     }
     return 0;
 }
