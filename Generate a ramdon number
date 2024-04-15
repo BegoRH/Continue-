@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+  srand(time(NULL));
+  // Write your code below
+  int randomNumber = rand();
+
+  printf ("%d\n",randomNumber);
+}
+
+// Generate a random Number between 1 and 20 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+  srand(time(NULL));
+  // Write your code below
+  int randomNumber = rand() % 20 + 1; // Here change 20 to the max that you want, example 100 or 200
+
+  printf ("%d\n",randomNumber);
+}
