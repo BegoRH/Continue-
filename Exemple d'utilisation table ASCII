@@ -1,0 +1,78 @@
+/*
+-----------------------------------------
+Declaration des bibliotheques utilisees
+-----------------------------------------
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+-----------------------------------------
+Declaration des equivalences
+-----------------------------------------
+*/
+
+#define BELL 7
+
+/*
+-----------------------------------------
+Declaration des prototypes de fonctions
+-----------------------------------------
+*/
+
+/*
+-----------------------------------------
+Declaration globale des variables
+-----------------------------------------
+*/
+/*****************************************
+Les variables de type 'char' sur 8 bits
+*****************************************/
+
+// On peut mettre a la suite avec le separateur "," des variables de meme type
+
+unsigned char caractere_1 ='A';             // en ASCii
+unsigned char caractere_2 = 0x41;           // en hexadecimale
+unsigned char caractere_3 = 65;             // en decimale
+unsigned char caractere_4 = 0b1000001;      // en binaire
+unsigned char caractere_5 = 0101;           // en octale, c'est un zero, premier caractere et non un "O"
+
+ unsigned char bip = BELL;
+/*
+-----------------------------------------
+			PROGRAMME PRINCIPAL
+-----------------------------------------
+*/
+int main()
+{
+	printf("Les valeurs des variables sont identiques: \n\n");
+
+	printf("variable caractere_1 type char : %u en decimale et %c en caractere\n",caractere_1,caractere_1);
+	printf("variable caractere_2 type char : %u en decimale et %c en caractere\n",caractere_2,caractere_2);
+	printf("variable caractere_3 type char : %u en decimale et %c en caractere\n",caractere_3,caractere_3);
+    printf("variable caractere_4 type char : %u en decimale et %c en caractere\n",caractere_4,caractere_4);
+    printf("variable caractere_5 type char : %u en decimale et %c en caractere\n\n",caractere_5,caractere_5);
+
+// **************************************************************************************************************************
+    int index1_for;     // permet d'incrementer mon index dans ma boucle for N�1
+    int index2_for;     // permet d'incrementer mon index dans ma boucle for N�2
+
+    // affichage du mode non etendu standard
+    for( index1_for = 33 ; index1_for <= 127; index1_for++ )
+        {
+        printf("Le caractere ASCii en decimale = %d, en caractere = %c, en hexadecimale = %#x\n", index1_for , index1_for , index1_for);
+        }
+
+    printf("\nici commence la table ASCii en mode non etendu\nElle depend des plateformes\nElle est OEM dans mon cas, non ANSI\n\n");
+
+     // affichage du mode etendu pour Windows
+    for( index2_for = 128 ; index2_for <= 255; index2_for++ )
+        {
+        printf("Le caractere ASCii en decimale = %d, en caractere = %c, en hexadecimale = %#x\n", index2_for , index2_for , index2_for);
+        }
+
+     // le bip de fin qui correspond a l'action BELL de la table
+     printf("\nLe caractere ASCii en decimale = 7, est le bip du bios %c \n",bip);
+    return 0;
+}
+
